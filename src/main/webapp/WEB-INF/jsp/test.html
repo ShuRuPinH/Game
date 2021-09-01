@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        info{
+            font-weight: bolder;
+            color: #0c63e4;
+        }
+    </style>
+</head>
+
+<body onload="checkItem(1,'Мне кажется, что среди мусора что-то блестит.<br>','nohave');">
+<div id="secret_info" class="bg-primary  col-12 col-sm-12 col-md-8">
+    <h3 id="info">Пояснения, зрение </h3><p></div>
+
+<script> info(`Моя кровь оказалась ключом к этой двери. Створки медленно раскрылись, как бы приглашая войти. Что ж, теперь путь свободен.`)
+</script>
+<button class="items" onmouseover="itemAction(120203,'Порезать палец и нанести кровь на дверь')" name="action_id" value=""  >поре</button>
+<br>Также этот тег никак не изменяет отображение текста.
+----------
+<span id="item_action"></span>
+
+
+<script>
+    var timeoutID;
+    function info(t){
+        document.getElementById("secret_info").style.color="black";
+        document.getElementById("secret_info").style.backgroundImage="none";
+        document.getElementById("secret_info").innerHTML=t;
+
+        timeoutID = window.setTimeout(clearInfo, 3500);
+    }
+    function clearInfo(){
+        document.getElementById("secret_info").innerHTML='';
+    }
+
+    function act(n){
+        // The rest of this code assumes you are not using a library.
+        // It can be made less verbose if you use one.
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = "/start";
+        const Field = document.createElement('input');
+        Field.name = "action_id";
+        Field.value = n;
+        form.appendChild(Field);
+        document.body.appendChild(form);
+        form.submit();
+    }
+    function checkItem(id, text, is){
+        switch (is){
+            case "have":{
+                if ( state.itemList.containsKey(id) ) {
+                document.getElementById(id).innerHTML = text; }
+                break;
+            }
+            case "nohave":{if (true ) {
+                document.getElementById(id).innerHTML = text; }
+                break;
+            }
+            default: break;
+        }}
+
+
+    function itemAction(id, descr) {
+
+        let teg= '<button name="action_id" value="' + id + '">' + descr + '</button>';
+        alert(teg);
+        document.getElementById("item_action").outerHTML = teg;
+    }
+</script>
+</script>
+
+</body>
+</html>

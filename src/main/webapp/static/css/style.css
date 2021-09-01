@@ -1,0 +1,83 @@
+@font-face {
+    font-family: Pompadur; /* Гарнитура шрифта */
+    src: url(../fonts/Alegreya.ttf); /* Путь к файлу со шрифтом */
+}
+p {
+    font-family: Pompadur, cursive;
+    font-size: 24px;
+}
+* {
+    font-family: Pompadur, cursive;
+
+}
+h1{
+    color: #ffffff;
+}
+body {
+    background-image: url(../pics/ffon.jpg); /* Путь к фоновому изображению */
+    background-repeat: no-repeat;
+    background-color: #2e2e40; /* Цвет фона */
+}
+#title{
+    width: 100%;
+    background-color: #2e2e40; /* Цвет фона */
+}
+#footer{
+    padding-top: 15px;
+    width: 100%;
+    background-color: #2e2e40; /* Цвет фона */
+}
+#text{
+    background-color: #000000; /* Цвет фона */
+    color: #ffffff;
+    font-size: 22px;
+}
+#secret_info{
+    background-size: cover; /* Фон занимает всю доступную площадь */
+    font-size: 26px;
+    text-align: center;
+    background-color: #a29e8b;
+
+    border: 25px solid #40c4c8;
+    border-image: url(../pics/rrr.png) 22 repeat repeat;
+
+}
+#inv{
+    background-color: #a29e8b;
+    border: 25px solid #40c4c8;
+    padding: 20px;
+    border-image: url(../pics/rrr.png) 22 repeat repeat;
+    text-align: left;
+
+}
+#apple{
+    background-image: url(../pics/apple.png); /* Путь к фоновому изображению */
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: contain;
+    contain-align: center;
+    min-height: 200px;
+}
+
+info{
+    color: #0c63e4;
+}
+/* кнопка    */
+button {
+    text-decoration:none; text-align:center;
+    padding:2px 32px;
+    border:double 1px #ffffff;
+    font-family: Pompadur, cursive;
+    font-size: 25px;
+    color:#fafafa;
+    background-color:#000000;
+                                     }
+.items{
+    text-decoration:none; text-align:center;
+    padding:2px 32px;
+    border:double 0px #ffffff;
+    font-family: Pompadur, cursive;
+    font-size: 25px;
+    color:#fafafa;
+    background-color:#a29e8b;
+}
